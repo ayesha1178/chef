@@ -79,18 +79,6 @@ export const CrewmateIllustration: React.FC<{
           <rect x="8" y="24" width="28" height="8" rx="2" fill="#E50914" />
         </g>
       )}
-
-      {/* Subtle Shh Hand Silhouette (Gesture) */}
-      <g transform="translate(48, 48)">
-        <path
-          d="M16 6C16 3.8 17.8 2 20 2C22.2 2 24 3.8 24 6V24C24 28 20 32 15 32C10 32 6 28 6 23V16C6 14.9 6.9 14 8 14C9.1 14 10 14.9 10 16V22H14V6C14 4.9 14.9 4 16 4V6Z"
-          fill={c.shadow}
-        />
-        <path
-          d="M17 7C17 4.8 18.5 3 20 3C21.5 3 23 4.8 23 7V23C23 27 19.5 30 15 30C10.5 30 7 27 7 23V17C7 15.9 7.9 15 9 15C10.1 15 11 15.9 11 17V21H15V7C15 5.9 15.9 5 17 5V7Z"
-          fill={c.highlight}
-        />
-      </g>
     </svg>
   );
 };
