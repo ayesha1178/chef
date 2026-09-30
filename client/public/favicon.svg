@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Spaceship Helmet Monogram -->
+  <rect width="64" height="64" rx="16" fill="#080A0D"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#E50914" stroke-width="2" stroke-opacity="0.6"/>
+  <!-- Helmet Outer -->
+  <path d="M18 36V26C18 18.268 24.268 12 32 12C39.732 12 46 18.268 46 26V36C46 43.732 39.732 50 32 50C24.268 50 18 43.732 18 36Z" fill="#E50914"/>
+  <!-- Visor Glass (Crew Cyan with specular highlight) -->
+  <rect x="23" y="20" width="22" height="13" rx="6.5" fill="#54D8E8"/>
+  <rect x="25" y="22" width="9" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.8"/>
+  <!-- Code bracket touch -->
+  <path d="M13 28L9 32L13 36" stroke="#54D8E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M51 28L55 32L51 36" stroke="#54D8E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

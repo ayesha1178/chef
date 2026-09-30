@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-spaceBlack: #080A0D;
+  --color-deepNavy: #101722;
+  --color-spaceNavy: #0C121B;
+  --color-panelBg: #121A26;
+  --color-panelBorder: rgba(84, 216, 232, 0.15);
+  --color-crewRed: #E50914;
+  --color-darkRed: #8B0E16;
+  --color-emergencyOrange: #FF6A00;
+  --color-crewCyan: #54D8E8;
+  --color-crewYellow: #FFD447;
+  --color-offWhite: #F4F4F1;
+  --color-mutedGray: #87909C;
+
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-card: 20px;
+  --radius-btn: 12px;
+}
+
+/* Base custom styles */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-spaceBlack);
+  color: var(--color-offWhite);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+/* Spaceship HUD Grid */
+.hud-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(84, 216, 232, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(84, 216, 232, 0.04) 1px, transparent 1px);
+}
+
+.radar-grid {
+  background-size: 24px 24px;
+  background-image: 
+    radial-gradient(circle, rgba(229, 9, 20, 0.12) 1px, transparent 1px);
+}
+
+/* Hazard Stripes Utility (for Emergency elements) */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FF6A00,
+    #FF6A00 12px,
+    #080A0D 12px,
+    #080A0D 24px
+  );
+}
+
+.hazard-stripes-sm {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FF6A00,
+    #FF6A00 6px,
+    #101722 6px,
+    #101722 12px
+  );
+}
+
+/* Custom Spaceship Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #080A0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+  border: 1px solid rgba(84, 216, 232, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+/* Focus outline for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-crewRed);
+  outline-offset: 2px;
+}
+
+/* Glowing Neon Elements */
+.glow-red {
+  box-shadow: 0 0 25px -4px rgba(229, 9, 20, 0.5);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px -3px rgba(84, 216, 232, 0.4);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 16px rgba(229, 9, 20, 0.6);
+}
+
+/* Starfield Animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Radar Sweep */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radarSweep 4s linear infinite;
+  transform-origin: center center;
+}
+
+/* Emergency Red Pulse */
+@keyframes emergencyPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(229, 9, 20, 0);
+  }
+}
+
+.animate-emergency {
+  animation: emergencyPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
