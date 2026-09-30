@@ -134,14 +134,14 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     >
       <div
         ref={modalRef}
-        className="w-full max-w-lg bg-deepNavy rounded-3xl border-2 border-crewRed/60 shadow-[0_0_60px_rgba(229,9,20,0.35)] overflow-hidden my-8 relative"
+        className="w-full max-w-lg bg-deepNavy rounded-3xl border border-panelBorder shadow-2xl overflow-hidden my-8 relative"
       >
         {/* Modal Header */}
         <div className="bg-spaceBlack/90 text-offWhite px-6 py-5 relative flex items-center justify-between border-b border-panelBorder">
           <div>
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs uppercase tracking-widest text-crewRed font-bold flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-crewRed animate-ping" />
+                <span className="w-2 h-2 rounded-full bg-crewRed" />
                 CREW ASSIGNMENT // PROTOCOL
               </span>
             </div>
@@ -173,7 +173,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <span className="font-mono text-xs tracking-widest uppercase text-crewCyan font-bold">
                   TRANSMISSION CONFIRMED
                 </span>
-                <h3 className="font-heading font-black text-3xl sm:text-4xl text-offWhite uppercase tracking-tight mt-1 text-glow-red">
+                <h3 className="font-heading font-black text-3xl sm:text-4xl text-offWhite uppercase tracking-tight mt-1">
                   MISSION ACCEPTED ✓
                 </h3>
                 <p className="text-xs sm:text-sm text-mutedGray mt-1 max-w-xs mx-auto">
@@ -182,7 +182,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               </div>
 
               {/* Holographic Crew Ticket Card */}
-              <div className="bg-spaceBlack/80 rounded-2xl border-2 border-crewRed/50 p-5 text-left space-y-3 relative overflow-hidden shadow-inner">
+              <div className="bg-spaceBlack/80 rounded-2xl border border-panelBorder p-5 text-left space-y-3 relative overflow-hidden shadow-inner">
                 <div className="flex items-center justify-between border-b border-panelBorder pb-2">
                   <div>
                     <span className="text-[10px] font-mono uppercase tracking-wider text-mutedGray">
@@ -226,7 +226,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 py-3 px-4 rounded-xl bg-crewRed text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-darkRed transition-all shadow-md glow-red"
+                  className="flex-1 py-3 px-4 rounded-xl bg-crewRed text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-darkRed transition-all shadow-md"
                 >
                   RETURN TO MISSIONS
                 </button>
@@ -283,7 +283,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     if (errors.name) setErrors((prev) => ({ ...prev, name: '' }));
                   }}
                   className={`w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border text-sm text-offWhite focus:outline-none transition-all ${
-                    errors.name ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-panelBorder focus:border-crewRed focus:ring-1 focus:ring-crewRed'
+                    errors.name ? 'border-red-500' : 'border-panelBorder focus:border-panelBorder'
                   }`}
                 />
                 {errors.name && <p className="text-[11px] text-red-400 mt-1 font-mono">{errors.name}</p>}
@@ -305,7 +305,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     if (errors.email) setErrors((prev) => ({ ...prev, email: '' }));
                   }}
                   className={`w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border text-sm text-offWhite focus:outline-none transition-all ${
-                    errors.email ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-panelBorder focus:border-crewRed focus:ring-1 focus:ring-crewRed'
+                    errors.email ? 'border-red-500' : 'border-panelBorder focus:border-panelBorder'
                   }`}
                 />
                 {errors.email && <p className="text-[11px] text-red-400 mt-1 font-mono">{errors.email}</p>}
@@ -321,7 +321,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     id="reg-year"
                     value={collegeYear}
                     onChange={(e) => setCollegeYear(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                   >
                     <option value="ABESEC - 1st Year">ABESEC - 1st Year (Rookie)</option>
                     <option value="ABESEC - 2nd Year">ABESEC - 2nd Year (Explorer)</option>
@@ -346,7 +346,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       if (errors.phone) setErrors((prev) => ({ ...prev, phone: '' }));
                     }}
                     className={`w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border text-sm text-offWhite focus:outline-none transition-all ${
-                      errors.phone ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-panelBorder focus:border-crewRed focus:ring-1 focus:ring-crewRed'
+                      errors.phone ? 'border-red-500' : 'border-panelBorder focus:border-panelBorder'
                     }`}
                   />
                   {errors.phone && <p className="text-[11px] text-red-400 mt-1 font-mono">{errors.phone}</p>}
@@ -362,7 +362,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   id="reg-dept"
                   value={department}
                   onChange={(e) => setDepartment(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                 >
                   <option value="Computer Science & Engineering">Computer Science & Engineering (CSE)</option>
                   <option value="AI & Machine Learning">AI & Machine Learning (AIML)</option>
@@ -386,7 +386,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex items-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-6 py-2.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md glow-red disabled:opacity-50"
+                  className="flex items-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-6 py-2.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:brightness-110 disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>

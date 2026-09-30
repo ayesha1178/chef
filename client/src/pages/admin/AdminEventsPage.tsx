@@ -365,7 +365,7 @@ export const AdminEventsPage: React.FC<AdminEventsPageProps> = ({
       {/* Delete Confirmation Modal */}
       {deleteConfirmId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-spaceBlack/85 backdrop-blur-sm animate-in fade-in">
-          <div className="w-full max-w-md bg-deepNavy border-2 border-crewRed rounded-2xl p-6 shadow-2xl space-y-4 glow-red">
+          <div className="w-full max-w-md bg-deepNavy border border-panelBorder rounded-2xl p-6 shadow-2xl space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-crewRed/20 border border-crewRed flex items-center justify-center text-crewRed">
                 <AlertTriangle className="w-5 h-5" />
@@ -402,7 +402,7 @@ export const AdminEventsPage: React.FC<AdminEventsPageProps> = ({
       {/* Create / Edit Mission Modal */}
       {isFormModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-spaceBlack/85 backdrop-blur-md overflow-y-auto animate-in fade-in">
-          <div className="w-full max-w-2xl bg-deepNavy border-2 border-crewRed/60 rounded-3xl shadow-2xl overflow-hidden my-8 glow-red">
+          <div className="w-full max-w-2xl bg-deepNavy border border-panelBorder rounded-3xl shadow-2xl overflow-hidden my-8">
             
             <div className="bg-spaceBlack/90 p-5 border-b border-panelBorder flex items-center justify-between">
               <div>

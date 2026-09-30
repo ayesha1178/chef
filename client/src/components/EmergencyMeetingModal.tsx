@@ -49,7 +49,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="w-full max-w-lg bg-deepNavy border-2 border-crewRed/60 rounded-3xl shadow-[0_0_50px_rgba(229,9,20,0.4)] overflow-hidden my-8 relative">
+      <div className="w-full max-w-lg bg-deepNavy border border-panelBorder rounded-3xl shadow-2xl overflow-hidden my-8 relative">
         
         {/* Top Emergency Red Alarm Header */}
         <div className="bg-gradient-to-r from-darkRed via-crewRed to-darkRed text-white p-5 flex items-center justify-between border-b-2 border-emergencyOrange relative overflow-hidden">
@@ -59,10 +59,10 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
             </div>
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-crewYellow font-bold flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-crewYellow animate-ping" />
+                <span className="w-2 h-2 rounded-full bg-crewYellow" />
                 TRANSMISSION // PRIORITY 01
               </div>
-              <h2 className="font-heading font-black text-xl tracking-tight text-white uppercase text-glow-red">
+              <h2 className="font-heading font-black text-xl tracking-tight text-white uppercase">
                 EMERGENCY MEETING
               </h2>
             </div>
@@ -84,7 +84,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
         <div className="p-6">
           {isSent ? (
             <div className="text-center py-6 space-y-5">
-              <div className="w-16 h-16 rounded-full bg-crewRed/20 border-2 border-crewRed mx-auto flex items-center justify-center glow-red">
+              <div className="w-16 h-16 rounded-full bg-crewRed/20 border-2 border-crewRed mx-auto flex items-center justify-center">
                 <CheckCircle2 className="w-10 h-10 text-crewRed" />
               </div>
 
@@ -132,7 +132,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
                 <select
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed focus:ring-1 focus:ring-crewRed"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                 >
                   <option value="Contest Problem Statement Issue">Contest Problem Statement / Testcase Issue</option>
                   <option value="Mission Registration / Pass Issue">Mission Registration or Pass Verification Issue</option>
@@ -154,7 +154,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
                     placeholder="e.g. Student Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
+                    className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                   />
                 </div>
 
@@ -168,7 +168,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
                     placeholder="e.g. student@abes.ac.in"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
+                    className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                   />
                 </div>
               </div>
@@ -184,7 +184,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
                   placeholder="Describe what occurred or how the crew can assist you immediately..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
+                  className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-panelBorder"
                 />
               </div>
 

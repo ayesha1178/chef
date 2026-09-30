@@ -56,7 +56,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
       <div className="absolute inset-0 bg-starfield opacity-40 pointer-events-none" />
       <div className="absolute inset-0 bg-cockpit-grid opacity-20 pointer-events-none" />
 
-      <div className="w-full max-w-md bg-deepNavy rounded-3xl border-2 border-crewRed/60 shadow-2xl overflow-hidden relative z-10 glow-red">
+      <div className="w-full max-w-md bg-deepNavy rounded-3xl border border-panelBorder shadow-2xl overflow-hidden relative z-10">
         
         {/* Top Spaceship Header */}
         <div className="bg-spaceBlack/90 text-offWhite p-7 border-b border-panelBorder relative">
@@ -83,7 +83,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
               </div>
             </div>
             
-            <div className="w-12 h-12 rounded-2xl bg-deepNavy border border-crewRed/50 flex items-center justify-center glow-red">
+            <div className="w-12 h-12 rounded-2xl bg-deepNavy border border-panelBorder flex items-center justify-center">
               <ShieldCheck className="w-6 h-6 text-crewRed" />
             </div>
           </div>
@@ -112,7 +112,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin@codechefabesec.in"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-spaceBlack/80 border border-panelBorder text-offWhite text-xs font-mono placeholder-mutedGray/50 focus:outline-none focus:border-crewRed transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-spaceBlack/80 border border-panelBorder text-offWhite text-xs font-mono placeholder-mutedGray/50 focus:outline-none focus:border-panelBorder transition-colors"
                   autoComplete="email"
                   required
                 />
@@ -133,7 +133,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-spaceBlack/80 border border-panelBorder text-offWhite text-xs font-mono placeholder-mutedGray/50 focus:outline-none focus:border-crewRed transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-spaceBlack/80 border border-panelBorder text-offWhite text-xs font-mono placeholder-mutedGray/50 focus:outline-none focus:border-panelBorder transition-colors"
                   autoComplete="current-password"
                   required
                 />
@@ -143,7 +143,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white py-3.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg glow-red disabled:opacity-50 mt-2"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white py-3.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:brightness-110 disabled:opacity-50 mt-2"
             >
               {isSubmitting ? (
                 <>
