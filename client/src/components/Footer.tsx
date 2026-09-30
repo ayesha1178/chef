@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Terminal, Radio, ShieldCheck, Megaphone, ExternalLink } from 'lucide-react';
+import { ArrowRight, Terminal, Radio, ShieldCheck, ExternalLink } from 'lucide-react';
 import { CrewmateIllustration } from './DecorativeElements';
 
 interface FooterProps {
@@ -7,7 +7,7 @@ interface FooterProps {
   onOpenEmergencyMeeting?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEmergencyMeeting }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-spaceBlack text-offWhite border-t border-panelBorder pt-16 pb-12 relative overflow-hidden">
       {/* Background Star Particles & Cockpit Grid */}
@@ -21,37 +21,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEmergencyMeeti
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Emergency Beacon Callout Banner */}
-        <div className="mb-12 p-6 rounded-2xl bg-deepNavy/80 border border-crewRed/40 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 glow-red">
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-12 h-12 rounded-xl bg-crewRed/20 border border-crewRed flex items-center justify-center shrink-0">
-              <Megaphone className="w-6 h-6 text-crewYellow animate-pulse" />
-            </div>
-            <div>
-              <div className="font-mono text-xs uppercase tracking-widest text-crewYellow font-bold flex items-center justify-center md:justify-start gap-2">
-                <span className="w-2 h-2 rounded-full bg-crewRed animate-ping" />
-                TRANSMISSION CHANNEL // OPEN
-              </div>
-              <h3 className="font-heading font-black text-xl text-offWhite tracking-tight">
-                ENCOUNTERED A SYSTEM BUG OR CONTEST ISSUE?
-              </h3>
-              <p className="text-xs text-mutedGray">
-                Dispatch an emergency alert directly to the CodeChef ABESEC Flight Mentors.
-              </p>
-            </div>
-          </div>
-
-          {onOpenEmergencyMeeting && (
-            <button
-              onClick={onOpenEmergencyMeeting}
-              className="flex items-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-5 py-2.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider border border-crewRed/60 transition-all glow-red shrink-0 hover:scale-105"
-            >
-              <Megaphone className="w-4 h-4 text-crewYellow" />
-              <span>CALL EMERGENCY MEETING</span>
-            </button>
-          )}
-        </div>
-
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-panelBorder/70">
           
