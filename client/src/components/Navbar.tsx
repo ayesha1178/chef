@@ -127,19 +127,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             )}
 
-            {/* Emergency Meeting Alert Trigger */}
-            {onOpenEmergencyMeeting && (
-              <button
-                onClick={onOpenEmergencyMeeting}
-                aria-label="Call Emergency Meeting"
-                className="group flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-bold tracking-wider bg-darkRed/60 hover:bg-crewRed text-crewYellow border border-crewRed/60 transition-all glow-red animate-pulse"
-                title="Call Emergency Meeting / Report Problem"
-              >
-                <Megaphone className="w-3.5 h-3.5 text-crewYellow group-hover:rotate-12 transition-transform" />
-                <span className="hidden xl:inline text-white">EMERGENCY</span>
-              </button>
-            )}
-
             {/* Admin Mission Control Link */}
             <button
               onClick={() => handleLinkClick(isAuthenticated ? 'admin-dashboard' : 'admin-login')}
@@ -186,16 +173,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               )}
             </button>
-
-            {onOpenEmergencyMeeting && (
-              <button
-                onClick={onOpenEmergencyMeeting}
-                aria-label="Emergency Meeting"
-                className="p-2 rounded-xl bg-crewRed text-white border border-emergencyOrange glow-red"
-              >
-                <Megaphone className="w-4 h-4 text-crewYellow" />
-              </button>
-            )}
 
             {onOpenSearch && (
               <button
