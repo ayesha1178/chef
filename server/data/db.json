@@ -14,7 +14,7 @@
       "featured": true,
       "edition": "FEATURED MISSION // 001",
       "highlights": [
-        "6 ICPC-style problems curated by CodeChef 5\u2605 rated alumni",
+        "6 ICPC-style problems curated by CodeChef 5★ rated alumni",
         "Real-time live orbital radar scoreboard on lab projection screens",
         "Official CodeChef ABESEC merchandise and rating badges for top rankers",
         "Post-contest editorial breakdown & solution walkthrough with the problem setters"
@@ -71,7 +71,7 @@
       "edition": "MISSION // 003",
       "highlights": [
         "24-Hour continuous prototyping sprint in the campus mothership",
-        "Over \u20b91,00,000 in prizes, swags, and cloud credits",
+        "Over ₹1,00,000 in prizes, swags, and cloud credits",
         "Midnight pizza fuel station, gaming arena, and energy drinks",
         "Judged by senior engineering architects from top startups"
       ],
@@ -154,7 +154,7 @@
       "highlights": [
         "Beginner-friendly walkthrough from 'Hello World' to dynamic arrays",
         "Setting up VS Code with CP fast snippets and compiler flags",
-        "Direct interaction with 4\u2605 and 5\u2605 rated seniors",
+        "Direct interaction with 4★ and 5★ rated seniors",
         "Official induction into the CodeChef ABESEC Student Crew"
       ],
       "organizer": {
@@ -238,7 +238,7 @@
     {
       "id": "admin-01",
       "email": "admin@codechefabesec.in",
-      "passwordHash": "$2b$10$aBfii8cdbDhfpKgTZQicnuq1v6PNIB/TbDJOdsJz1PkJUF0d2VFIi",
+      "passwordHash": "$2b$10$2JkecImfTh3dOjeDBHk7IuX4nmtc/7m2BoP41uovRInc7DqUG6r3e",
       "name": "CodeChef ABESEC Flight Commander",
       "role": "Mission Controller",
       "createdAt": "2026-09-01T10:00:00.000Z"
