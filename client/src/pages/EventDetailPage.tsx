@@ -153,7 +153,7 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({
         {/* Hero Mission Image with Visor HUD */}
         <div className="relative aspect-21/9 w-full overflow-hidden border-b border-panelBorder">
           <img
-            src={event.imageUrl}
+            src={event.imageUrl || event.image}
             alt={event.name}
             className="w-full h-full object-cover"
           />

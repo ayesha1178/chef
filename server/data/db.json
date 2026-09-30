@@ -14,7 +14,7 @@
       "featured": true,
       "edition": "FEATURED MISSION // 001",
       "highlights": [
-        "6 ICPC-style problems curated by CodeChef 5★ rated alumni",
+        "6 ICPC-style problems curated by CodeChef 5\u2605 rated alumni",
         "Real-time live orbital radar scoreboard on lab projection screens",
         "Official CodeChef ABESEC merchandise and rating badges for top rankers",
         "Post-contest editorial breakdown & solution walkthrough with the problem setters"
@@ -35,7 +35,7 @@
       "time": "03:30 PM - 06:00 PM",
       "venue": "Innovation Hub, Ground Floor, ABESEC",
       "description": "Master advanced graph traversals, Dijkstra shortest-path navigation, Disjoint Set Union (DSU), and binary lifting tree algorithms. Hands-on problem solving sprint with senior crew mentors.",
-      "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+      "image": "/missions/dsa-expedition.jpg",
       "registrationDeadline": "2026-10-21",
       "capacity": 80,
       "featured": false,
@@ -52,7 +52,8 @@
         "contactEmail": "dsa@codechefabesec.in"
       },
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "updatedAt": "2026-09-05T12:00:00.000Z"
+      "updatedAt": "2026-09-05T12:00:00.000Z",
+      "imageUrl": "/missions/dsa-expedition.jpg"
     },
     {
       "id": "evt-spacehack-2026",
@@ -62,14 +63,14 @@
       "time": "09:00 AM - 09:00 AM (24 Hours)",
       "venue": "ABES Auditorium & Virtual Mission Control",
       "description": "24 hours. Zero gravity. Infinite code. Assemble your squad of 2-4 builders to architect real-world decentralized systems, developer tooling, and autonomous AI agents for cash prizes and fast-track interviews.",
-      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+      "image": "/missions/spacehack-2026.png",
       "registrationDeadline": "2026-11-02",
       "capacity": 220,
       "featured": false,
       "edition": "MISSION // 003",
       "highlights": [
         "24-Hour continuous prototyping sprint in the campus mothership",
-        "Over ₹1,00,000 in prizes, swags, and cloud credits",
+        "Over \u20b91,00,000 in prizes, swags, and cloud credits",
         "Midnight pizza fuel station, gaming arena, and energy drinks",
         "Judged by senior engineering architects from top startups"
       ],
@@ -79,7 +80,8 @@
         "contactEmail": "hack@codechefabesec.in"
       },
       "createdAt": "2026-09-10T14:00:00.000Z",
-      "updatedAt": "2026-09-10T14:00:00.000Z"
+      "updatedAt": "2026-09-10T14:00:00.000Z",
+      "imageUrl": "/missions/spacehack-2026.png"
     },
     {
       "id": "evt-systems-rust",
@@ -89,7 +91,7 @@
       "time": "04:00 PM - 06:00 PM",
       "venue": "Raman Block Seminar Hall 02, ABESEC",
       "description": "Where memory safety meets rocket telemetry. A deep technical talk exploring memory management without a garbage collector, zero-cost abstractions, and mission-critical embedded software.",
-      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",
+      "image": "/missions/systems-rust.jpg",
       "registrationDeadline": "2026-11-11",
       "capacity": 120,
       "featured": false,
@@ -105,7 +107,8 @@
         "contactEmail": "talks@codechefabesec.in"
       },
       "createdAt": "2026-09-12T09:30:00.000Z",
-      "updatedAt": "2026-09-12T09:30:00.000Z"
+      "updatedAt": "2026-09-12T09:30:00.000Z",
+      "imageUrl": "/missions/systems-rust.jpg"
     },
     {
       "id": "evt-bug-hunt-arena",
@@ -115,7 +118,7 @@
       "time": "05:00 PM - 07:30 PM",
       "venue": "Computing Centre 4 & CodeChef Portal",
       "description": "Find the impostor in the codebase! High-intensity competitive debugging challenge. 8 tricky programs with subtle edge-case failures, integer overflows, and off-by-one errors. Fix them before time runs out.",
-      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+      "image": "/missions/bug-hunt.jpg",
       "registrationDeadline": "2026-11-19",
       "capacity": 95,
       "featured": false,
@@ -131,7 +134,8 @@
         "contactEmail": "cp@codechefabesec.in"
       },
       "createdAt": "2026-09-15T16:00:00.000Z",
-      "updatedAt": "2026-09-15T16:00:00.000Z"
+      "updatedAt": "2026-09-15T16:00:00.000Z",
+      "imageUrl": "/missions/bug-hunt.jpg"
     },
     {
       "id": "evt-rookie-deployment",
@@ -141,7 +145,7 @@
       "time": "02:00 PM - 05:00 PM",
       "venue": "ABESEC Central Amphitheatre & Lab 1",
       "description": "Essential orientation for 1st and 2nd year students. Learn how to set up competitive programming environments, leverage C++ STL (vectors, sets, maps, priority queues), and climb the CodeChef division stars.",
-      "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+      "image": "/missions/rookie-deployment.jpg",
       "registrationDeadline": "2026-11-27",
       "capacity": 180,
       "featured": false,
@@ -149,7 +153,7 @@
       "highlights": [
         "Beginner-friendly walkthrough from 'Hello World' to dynamic arrays",
         "Setting up VS Code with CP fast snippets and compiler flags",
-        "Direct interaction with 4★ and 5★ rated seniors",
+        "Direct interaction with 4\u2605 and 5\u2605 rated seniors",
         "Official induction into the CodeChef ABESEC Student Crew"
       ],
       "organizer": {
@@ -158,7 +162,8 @@
         "contactEmail": "crew@codechefabesec.in"
       },
       "createdAt": "2026-09-18T11:00:00.000Z",
-      "updatedAt": "2026-09-18T11:00:00.000Z"
+      "updatedAt": "2026-09-18T11:00:00.000Z",
+      "imageUrl": "/missions/rookie-deployment.jpg"
     }
   ],
   "registrations": [

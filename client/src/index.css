@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-spaceBlack: #080A0D;
-  --color-deepNavy: #101722;
-  --color-spaceNavy: #0C121B;
-  --color-panelBg: #121A26;
-  --color-panelBorder: rgba(84, 216, 232, 0.15);
-  --color-crewRed: #E50914;
-  --color-darkRed: #8B0E16;
+  --color-spaceBlack: #07090B;
+  --color-deepNavy: #0C121B;
+  --color-spaceNavy: #090E14;
+  --color-panelBg: #0E151E;
+  --color-panelBorder: #17252B;
+  --color-border: #17252B;
+  --color-crewRed: #B5121B;
+  --color-darkRed: #8F0D16;
   --color-emergencyOrange: #FF6A00;
-  --color-crewCyan: #54D8E8;
-  --color-crewYellow: #FFD447;
-  --color-offWhite: #F4F4F1;
-  --color-mutedGray: #87909C;
+  --color-crewCyan: #1BB6C9;
+  --color-crewYellow: #F2C94C;
+  --color-offWhite: #F2F2F2;
+  --color-mutedGray: #858C96;
+
+  /* Explicit user palette variables */
+  --color-background: #07090B;
+  --color-primaryRed: #B5121B;
+  --color-redGlow: #B5121B;
+  --color-yellowAccent: #F2C94C;
+  --color-cyanAccent: #1BB6C9;
+  --color-primaryText: #F2F2F2;
+  --color-secondaryText: #858C96;
 
   --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -25,6 +35,15 @@
 /* Base custom styles */
 :root {
   color-scheme: dark;
+  --bg-primary: #07090B;
+  --color-primary-red: #B5121B;
+  --color-dark-red: #8F0D16;
+  --color-red-glow: #B5121B;
+  --color-yellow-accent: #F2C94C;
+  --color-cyan-accent: #1BB6C9;
+  --color-primary-text: #F2F2F2;
+  --color-secondary-text: #858C96;
+  --color-border: #17252B;
 }
 
 body {
@@ -45,34 +64,34 @@ h1, h2, h3, h4, h5, h6 {
 .hud-grid-bg {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(84, 216, 232, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(84, 216, 232, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(27, 182, 201, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 182, 201, 0.04) 1px, transparent 1px);
 }
 
 .radar-grid {
   background-size: 24px 24px;
   background-image: 
-    radial-gradient(circle, rgba(229, 9, 20, 0.12) 1px, transparent 1px);
+    radial-gradient(circle, rgba(181, 18, 27, 0.14) 1px, transparent 1px);
 }
 
 /* Hazard Stripes Utility (for Emergency elements) */
 .hazard-stripes {
   background: repeating-linear-gradient(
     -45deg,
-    #FF6A00,
-    #FF6A00 12px,
-    #080A0D 12px,
-    #080A0D 24px
+    #B5121B,
+    #B5121B 12px,
+    #07090B 12px,
+    #07090B 24px
   );
 }
 
 .hazard-stripes-sm {
   background: repeating-linear-gradient(
     -45deg,
-    #FF6A00,
-    #FF6A00 6px,
-    #101722 6px,
-    #101722 12px
+    #B5121B,
+    #B5121B 6px,
+    #0C121B 6px,
+    #0C121B 12px
   );
 }
 
@@ -82,15 +101,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #080A0D;
+  background: #07090B;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #17252B;
   border-radius: 4px;
-  border: 1px solid rgba(84, 216, 232, 0.2);
+  border: 1px solid #17252B;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E50914;
+  background: #B5121B;
 }
 
 /* Focus outline for accessibility */
@@ -101,15 +120,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* Glowing Neon Elements */
 .glow-red {
-  box-shadow: 0 0 25px -4px rgba(229, 9, 20, 0.5);
+  box-shadow: 0 0 25px -4px rgba(181, 18, 27, 0.6);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 20px -3px rgba(84, 216, 232, 0.4);
+  box-shadow: 0 0 20px -3px rgba(27, 182, 201, 0.45);
 }
 
 .text-glow-red {
-  text-shadow: 0 0 16px rgba(229, 9, 20, 0.6);
+  text-shadow: 0 0 16px rgba(181, 18, 27, 0.7);
 }
 
 /* Starfield Animation */
@@ -144,10 +163,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Emergency Red Pulse */
 @keyframes emergencyPulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+    box-shadow: 0 0 0 0 rgba(181, 18, 27, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 14px rgba(229, 9, 20, 0);
+    box-shadow: 0 0 0 14px rgba(181, 18, 27, 0);
   }
 }
 

@@ -40,13 +40,25 @@ app.use('/api/events', eventsRoutes);
 app.use('/api/registrations', registrationsRoutes);
 app.use('/api/admin', authRoutes);
 
-// Static client production hosting
+// Static client production hosting & public assets
 import path from 'path';
 import fs from 'fs';
 
+const publicPaths = [
+  path.resolve(process.cwd(), 'client/dist'),
+  path.resolve(process.cwd(), 'client/public'),
+  path.resolve(process.cwd(), '../client/public'),
+  path.resolve(process.cwd(), 'public')
+];
+
+for (const p of publicPaths) {
+  if (fs.existsSync(p)) {
+    app.use(express.static(p));
+  }
+}
+
 const clientDist = path.resolve(process.cwd(), 'client/dist');
 if (fs.existsSync(clientDist)) {
-  app.use(express.static(clientDist));
   app.get('*', (req: Request, res: Response, next: NextFunction) => {
     if (req.path.startsWith('/api')) {
       return next();

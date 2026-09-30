@@ -303,7 +303,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* Event Image with HUD Overlay */}
               <div className="lg:col-span-5 relative group overflow-hidden rounded-2xl border border-panelBorder aspect-16/10">
                 <img
-                  src={featuredEvent.imageUrl}
+                  src={featuredEvent.imageUrl || featuredEvent.image}
                   alt={featuredEvent.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
