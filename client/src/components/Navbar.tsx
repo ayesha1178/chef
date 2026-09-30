@@ -143,14 +143,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Admin Mission Control Link */}
             <button
               onClick={() => handleLinkClick(isAuthenticated ? 'admin-dashboard' : 'admin-login')}
-              className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono tracking-wider transition-all border ${
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-bold tracking-wider transition-all border ${
                 currentTab.startsWith('admin')
                   ? 'bg-crewRed text-white border-crewRed glow-red'
                   : 'bg-deepNavy/80 text-mutedGray hover:text-offWhite border-panelBorder hover:border-crewCyan/40'
               }`}
+              title={isAuthenticated ? 'Admin Mission Control (Logged In)' : 'Admin Portal Login'}
             >
               <ShieldCheck className="w-3.5 h-3.5 text-crewCyan" />
-              <span>{isAuthenticated ? 'MISSION CONTROL' : 'ADMIN'}</span>
+              <span>ADMIN</span>
+              {isAuthenticated && (
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse ml-0.5" title="Logged In" />
+              )}
             </button>
 
             {/* Primary CTA */}
@@ -165,6 +169,24 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Mobile Actions & Hamburger */}
           <div className="flex md:hidden items-center gap-2">
+            {/* Quick Admin Button on Mobile */}
+            <button
+              onClick={() => handleLinkClick(isAuthenticated ? 'admin-dashboard' : 'admin-login')}
+              aria-label="Admin Portal"
+              title="Admin Portal"
+              className={`p-2 rounded-xl border font-mono text-xs font-bold transition-colors flex items-center gap-1 ${
+                currentTab.startsWith('admin')
+                  ? 'bg-crewRed text-white border-crewRed'
+                  : 'bg-deepNavy text-mutedGray hover:text-white border-panelBorder'
+              }`}
+            >
+              <ShieldCheck className="w-4 h-4 text-crewCyan" />
+              <span className="text-[10px]">ADMIN</span>
+              {isAuthenticated && (
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              )}
+            </button>
+
             {onOpenEmergencyMeeting && (
               <button
                 onClick={onOpenEmergencyMeeting}
@@ -229,10 +251,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={() => handleLinkClick(isAuthenticated ? 'admin-dashboard' : 'admin-login')}
-                className="w-full flex items-center justify-center gap-2 bg-deepNavy text-mutedGray hover:text-white py-2.5 rounded-xl font-mono text-xs border border-panelBorder"
+                className="w-full flex items-center justify-center gap-2 bg-deepNavy text-offWhite hover:text-white py-2.5 rounded-xl font-mono text-xs font-bold border border-panelBorder"
               >
                 <ShieldCheck className="w-4 h-4 text-crewCyan" />
-                <span>{isAuthenticated ? 'MISSION CONTROL DASHBOARD' : 'OFFICER LOGIN'}</span>
+                <span>{isAuthenticated ? 'ADMIN MISSION CONTROL (LOGGED IN)' : 'ADMIN LOGIN'}</span>
+                {isAuthenticated && (
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse ml-1" />
+                )}
               </button>
             </div>
           </div>
