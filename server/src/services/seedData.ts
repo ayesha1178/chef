@@ -9,7 +9,7 @@ export const INITIAL_EVENTS: IEvent[] = [
     time: '05:00 PM - 07:30 PM',
     venue: 'ABESEC Computing Lab 02 & CodeChef Portal',
     description: 'High-voltage 2.5 hour speed algorithmic clash. 6 problems ranging from binary search and segment trees to dynamic programming optimization. Live big-screen leaderboard with real-time verdicts.',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
+    image: '/missions/speed-blitz.jpg',
     registrationDeadline: '2026-10-13',
     capacity: 150,
     featured: true,
