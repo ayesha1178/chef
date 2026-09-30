@@ -276,7 +276,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   id="reg-name"
                   type="text"
                   required
-                  placeholder="e.g. Sahil Khan"
+                  placeholder="e.g. Student Name"
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);

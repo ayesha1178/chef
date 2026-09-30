@@ -151,7 +151,7 @@ export const EmergencyMeetingModal: React.FC<EmergencyMeetingModalProps> = ({
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Sahil Khan"
+                    placeholder="e.g. Student Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-3.5 py-2 rounded-xl bg-spaceBlack border border-panelBorder text-sm text-offWhite focus:outline-none focus:border-crewRed"
