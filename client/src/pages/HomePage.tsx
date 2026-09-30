@@ -717,37 +717,37 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ========================================================
           9. FINAL CTA
          ======================================================== */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-deepNavy border-2 border-crewRed/50 p-8 sm:p-14 text-center space-y-6 relative overflow-hidden glow-red">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="rounded-3xl bg-deepNavy border border-crewRed/50 p-6 sm:p-8 text-center space-y-4 relative overflow-hidden">
           
-          <div className="w-16 h-16 rounded-2xl bg-crewRed/20 border border-crewRed mx-auto flex items-center justify-center glow-red">
+          <div className="w-12 h-12 rounded-xl bg-crewRed/20 border border-crewRed mx-auto flex items-center justify-center">
             <CrewmateIllustration color="red" size="sm" hasChefHat={true} />
           </div>
 
-          <div className="space-y-2 max-w-2xl mx-auto">
-            <div className="font-mono text-xs uppercase tracking-widest text-crewYellow font-bold">
+          <div className="space-y-1.5 max-w-2xl mx-auto">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-crewYellow font-bold">
               THE CODING CREW IS CALLING
             </div>
-            <h2 className="font-heading font-black text-3xl sm:text-5xl text-offWhite uppercase tracking-tight">
+            <h2 className="font-heading font-black text-2xl sm:text-3xl text-offWhite uppercase tracking-tight">
               READY TO BOARD THE <span className="text-crewRed">SPACESHIP?</span>
             </h2>
-            <p className="text-xs sm:text-base text-mutedGray leading-relaxed">
+            <p className="text-xs sm:text-sm text-mutedGray leading-relaxed max-w-lg mx-auto">
               Claim your crew assignment, solve algorithmic problems, and build alongside ABESEC's top engineers. No experience needed—just curiosity and ambition.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={() => onNavigate('events')}
-              className="flex items-center gap-3 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-8 py-4 rounded-2xl font-mono text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-[0_0_35px_rgba(229,9,20,0.7)] hover:-translate-y-0.5 border border-crewRed/60 glow-red"
+              className="flex items-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-6 py-3 rounded-xl font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md hover:-translate-y-0.5 border border-crewRed/60"
             >
               <span>JOIN THE CREW →</span>
-              <ArrowRight className="w-4 h-4 text-crewYellow" />
+              <ArrowRight className="w-3.5 h-3.5 text-crewYellow" />
             </button>
 
             <button
               onClick={() => onNavigate('events')}
-              className="px-8 py-4 rounded-2xl font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-offWhite hover:text-white bg-spaceBlack hover:bg-spaceNavy border border-panelBorder hover:border-crewCyan/50 transition-colors"
+              className="px-6 py-3 rounded-xl font-mono text-xs font-bold uppercase tracking-wider text-offWhite hover:text-white bg-spaceBlack hover:bg-spaceNavy border border-panelBorder transition-colors"
             >
               VIEW MISSION MANIFEST
             </button>
