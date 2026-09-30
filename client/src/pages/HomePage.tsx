@@ -14,7 +14,6 @@ import {
   ShieldCheck, 
   Award, 
   CheckCircle2, 
-  Megaphone, 
   Flame, 
   Compass, 
   Activity,
@@ -26,7 +25,6 @@ import { EventCard } from '../components/EventCard';
 import { 
   CrewmateIllustration, 
   SecretMissionBadge, 
-  EmergencyMeetingButton, 
   SpaceshipRadar 
 } from '../components/DecorativeElements';
 import { LoadingSkeletonGrid, ErrorState } from '../components/States';
@@ -39,7 +37,6 @@ interface HomePageProps {
   onRegisterEvent: (id: string, e?: React.MouseEvent) => void;
   onNavigate: (tab: string) => void;
   onRetry: () => void;
-  onOpenEmergencyMeeting?: () => void;
 }
 
 export const HomePage: React.FC<HomePageProps> = ({
@@ -49,8 +46,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   onSelectEvent,
   onRegisterEvent,
   onNavigate,
-  onRetry,
-  onOpenEmergencyMeeting
+  onRetry
 }) => {
   // Find featured mission or fallback to first open event
   const featuredEvent = events.find((e) => e.featured) || events[0];
@@ -717,58 +713,6 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* ========================================================
-          8. EMERGENCY MEETING (Reference 2 Interactive Concept)
-         ======================================================== */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-darkRed/80 via-deepNavy to-darkRed/80 border-2 border-emergencyOrange p-6 sm:p-8 shadow-[0_0_35px_rgba(181,18,27,0.3)] relative overflow-hidden">
-          
-          {/* Hazard Frame Border Strip */}
-          <div className="absolute top-0 inset-x-0 h-2 hazard-stripes" />
-          <div className="absolute bottom-0 inset-x-0 h-2 hazard-stripes" />
-
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
-            
-            <div className="space-y-3 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-crewYellow font-bold bg-spaceBlack/80 px-3 py-1 rounded-full border border-emergencyOrange">
-                <Megaphone className="w-3.5 h-3.5 text-crewYellow animate-bounce" />
-                REPORT AN ISSUE // EMERGENCY PROTOCOL
-              </div>
-
-              <h2 className="font-heading font-black text-2xl sm:text-4xl text-white uppercase tracking-tight text-glow-red">
-                EMERGENCY MEETING.
-              </h2>
-
-              <p className="text-xs sm:text-sm text-offWhite/80 max-w-lg leading-relaxed">
-                Need urgent technical assistance with a contest problem statement? Suspect an impostor bug in the automated judge? Press the emergency button to dispatch an alert directly to the CodeChef ABESEC leads.
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono text-crewYellow">
-                <span>• CONTEST PROBLEM ERRORS</span>
-                <span>• MENTOR ASSISTANCE</span>
-                <span>• CREW COMMUNICATIONS</span>
-              </div>
-            </div>
-
-            {/* Interactive 3D Emergency Meeting Button Component */}
-            <div className="flex flex-col items-center shrink-0">
-              <EmergencyMeetingButton
-                size="sm"
-                onClick={() => {
-                  if (onOpenEmergencyMeeting) {
-                    onOpenEmergencyMeeting();
-                  }
-                }}
-              />
-              <div className="font-mono text-[9px] text-mutedGray uppercase tracking-widest mt-2 animate-pulse">
-                [ CLICK TO SOUND EMERGENCY SIREN ]
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
 
       {/* ========================================================
           9. FINAL CTA

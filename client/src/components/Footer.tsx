@@ -4,7 +4,6 @@ import { CrewmateIllustration } from './DecorativeElements';
 
 interface FooterProps {
   onNavigate: (tab: string) => void;
-  onOpenEmergencyMeeting?: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {

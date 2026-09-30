@@ -74,26 +74,6 @@ h1, h2, h3, h4, h5, h6 {
     radial-gradient(circle, rgba(181, 18, 27, 0.14) 1px, transparent 1px);
 }
 
-/* Hazard Stripes Utility (for Emergency elements) */
-.hazard-stripes {
-  background: repeating-linear-gradient(
-    -45deg,
-    #B5121B,
-    #B5121B 12px,
-    #07090B 12px,
-    #07090B 24px
-  );
-}
-
-.hazard-stripes-sm {
-  background: repeating-linear-gradient(
-    -45deg,
-    #B5121B,
-    #B5121B 6px,
-    #0C121B 6px,
-    #0C121B 12px
-  );
-}
 
 /* Custom Spaceship Scrollbar */
 ::-webkit-scrollbar {
@@ -164,16 +144,3 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   transform-origin: center center;
 }
 
-/* Emergency Red Pulse */
-@keyframes emergencyPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(181, 18, 27, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 14px rgba(181, 18, 27, 0);
-  }
-}
-
-.animate-emergency {
-  animation: emergencyPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}

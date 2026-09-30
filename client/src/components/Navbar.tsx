@@ -16,14 +16,12 @@ interface NavbarProps {
   currentTab: string;
   onNavigate: (tab: string, eventId?: string) => void;
   onOpenSearch?: () => void;
-  onOpenEmergencyMeeting?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentTab,
   onNavigate,
-  onOpenSearch,
-  onOpenEmergencyMeeting
+  onOpenSearch
 }) => {
   const { isAuthenticated } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

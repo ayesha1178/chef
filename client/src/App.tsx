@@ -14,7 +14,6 @@ import { AdminEventsPage } from './pages/admin/AdminEventsPage';
 import { AdminRegistrationsPage } from './pages/admin/AdminRegistrationsPage';
 import { AdminSettingsPage } from './pages/admin/AdminSettingsPage';
 import { RegistrationModal } from './components/RegistrationModal';
-import { EmergencyMeetingModal } from './components/EmergencyMeetingModal';
 import { ToastProvider, useToast } from './context/ToastContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { EventItem, RegistrationItem } from './types';
@@ -36,8 +35,6 @@ function AppContent() {
   const [regModalEvent, setRegModalEvent] = useState<EventItem | null>(null);
   const [isRegModalOpen, setIsRegModalOpen] = useState<boolean>(false);
 
-  // Emergency Meeting Modal State
-  const [isEmergencyModalOpen, setIsEmergencyModalOpen] = useState<boolean>(false);
 
   // Fetch all events from API
   const fetchEvents = useCallback(async () => {
@@ -159,7 +156,6 @@ function AppContent() {
         currentTab={currentTab}
         onNavigate={navigateTo}
         onOpenSearch={() => navigateTo('events')}
-        onOpenEmergencyMeeting={() => setIsEmergencyModalOpen(true)}
       />
 
       {/* Main Public Content */}
@@ -173,7 +169,6 @@ function AppContent() {
             onRegisterEvent={handleOpenRegistration}
             onNavigate={navigateTo}
             onRetry={fetchEvents}
-            onOpenEmergencyMeeting={() => setIsEmergencyModalOpen(true)}
           />
         )}
 
@@ -217,10 +212,7 @@ function AppContent() {
       </main>
 
       {/* Spaceship Comms Footer */}
-      <Footer
-        onNavigate={navigateTo}
-        onOpenEmergencyMeeting={() => setIsEmergencyModalOpen(true)}
-      />
+      <Footer onNavigate={navigateTo} />
 
       {/* Global Registration Modal (Crew Assignment) */}
       <RegistrationModal
@@ -230,11 +222,6 @@ function AppContent() {
         onSuccessRegistered={handleRegistrationComplete}
       />
 
-      {/* Global Emergency Meeting / Dispatch Modal */}
-      <EmergencyMeetingModal
-        isOpen={isEmergencyModalOpen}
-        onClose={() => setIsEmergencyModalOpen(false)}
-      />
     </div>
   );
 }
