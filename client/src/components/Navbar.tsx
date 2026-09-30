@@ -3,7 +3,6 @@ import {
   Search, 
   Menu, 
   X, 
-  ArrowRight, 
   ShieldCheck, 
   Terminal, 
   Megaphone, 
@@ -142,15 +141,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               {isAuthenticated && (
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse ml-0.5" title="Logged In" />
               )}
-            </button>
-
-            {/* Primary CTA */}
-            <button
-              onClick={() => handleLinkClick('events')}
-              className="flex items-center gap-2 bg-gradient-to-r from-crewRed to-darkRed hover:from-darkRed hover:to-crewRed text-white px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-crewRed/50 glow-red"
-            >
-              <span>JOIN THE CREW</span>
-              <ArrowRight className="w-4 h-4 text-crewYellow" />
             </button>
           </div>
 
