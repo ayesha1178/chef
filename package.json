@@ -1,15 +1,12 @@
 {
-  "name": "vanta-club-platform",
+  "name": "codechef-abesec-platform",
   "version": "1.0.0",
   "private": true,
-  "description": "VANTA - Premium College Club Event Management Platform",
+  "description": "CodeChef ABESEC - The Coding Crew Event Platform",
   "scripts": {
-    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
-    "dev:server": "npm run dev --prefix server",
-    "dev:client": "npm run dev --prefix client",
-    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"magenta,cyan\" \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "npm run build --prefix client && npm run build --prefix server",
-    "start": "npm run start --prefix server"
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server && npm run build --prefix server",
+    "start": "node server/dist/index.js",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"magenta,cyan\" \"npm run dev --prefix server\" \"npm run dev --prefix client\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

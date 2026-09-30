@@ -35,13 +35,28 @@ app.get('/api/health', (_req: Request, res: Response) => {
   });
 });
 
-// Mount Routes
+// Mount API Routes
 app.use('/api/events', eventsRoutes);
 app.use('/api/registrations', registrationsRoutes);
 app.use('/api/admin', authRoutes);
 
-// 404 handler
-app.use((req: Request, res: Response) => {
+// Static client production hosting
+import path from 'path';
+import fs from 'fs';
+
+const clientDist = path.resolve(process.cwd(), 'client/dist');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req: Request, res: Response, next: NextFunction) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
+// 404 handler for API routes
+app.use('/api/*', (req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     message: `API endpoint ${req.method} ${req.originalUrl} not found.`

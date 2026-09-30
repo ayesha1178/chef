@@ -223,6 +223,14 @@
       "name": "VANTA Club Lead Admin",
       "role": "Club Administrator",
       "createdAt": "2026-09-30T06:09:06.204Z"
+    },
+    {
+      "id": "admin-codechef",
+      "email": "admin@codechefabesec.in",
+      "passwordHash": "$2b$10$lqdJNPPMRD3cb1NezzMKT.gCH2gzoYJGlRGoHrb4qw/N4v.PJlvN2",
+      "name": "CodeChef ABESEC Flight Commander",
+      "role": "Mission Controller",
+      "createdAt": "2026-09-30T10:36:54.075Z"
     }
   ]
 }
