@@ -129,36 +129,39 @@ export const EmergencyMeetingButton: React.FC<{
   onClick: () => void;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-}> = ({ onClick, size = 'md', className = '' }) => {
+}> = ({ onClick, size = 'sm', className = '' }) => {
+  const isSm = size === 'sm';
   const isLg = size === 'lg';
+
+  const containerWidth = isSm ? 'w-32 sm:w-36' : isLg ? 'w-44 sm:w-48' : 'w-36 sm:w-40';
+  const domeSize = isSm ? 'w-11 h-11 sm:w-12 sm:h-12' : isLg ? 'w-14 h-14 sm:w-16 sm:h-16' : 'w-12 h-12 sm:w-14 sm:h-14';
+  const lidHeight = isSm ? 'h-9' : isLg ? 'h-12' : 'h-10';
 
   return (
     <div className={`relative inline-block group cursor-pointer ${className}`} onClick={onClick}>
       {/* Outer Hazard Stripes Border Base */}
-      <div className={`relative rounded-2xl p-1.5 hazard-stripes shadow-2xl transition-transform duration-300 group-hover:scale-105 ${
-        isLg ? 'w-48 sm:w-56' : 'w-40 sm:w-44'
-      }`}>
+      <div className={`relative rounded-2xl p-1 hazard-stripes shadow-xl transition-transform duration-300 group-hover:scale-105 ${containerWidth}`}>
         {/* Metal Pedestal Container */}
-        <div className="bg-[#181F2C] border-2 border-[#2C384A] rounded-xl p-3 sm:p-4 text-center relative overflow-hidden">
+        <div className="bg-[#101722] border border-panelBorder rounded-xl p-2.5 sm:p-3 text-center relative overflow-hidden">
           
           {/* Glass Cover Lid (Hinged at top, opens visually on hover) */}
-          <div className="absolute inset-x-2 top-2 h-14 bg-crewCyan/15 border border-crewCyan/40 rounded-lg backdrop-blur-xs pointer-events-none transition-all duration-300 origin-top group-hover:-translate-y-2 group-hover:opacity-60 group-hover:rotate-x-12" />
+          <div className={`absolute inset-x-2 top-1.5 ${lidHeight} bg-crewCyan/15 border border-crewCyan/40 rounded-lg backdrop-blur-xs pointer-events-none transition-all duration-300 origin-top group-hover:-translate-y-2 group-hover:opacity-60 group-hover:rotate-x-12`} />
 
           {/* 3D Red Emergency Dome Button */}
           <button
             type="button"
-            className="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full bg-gradient-to-b from-[#FF2E3B] via-[#E50914] to-[#8B0E16] border-4 border-[#FF6A00]/80 shadow-[0_8px_20px_rgba(229,9,20,0.6)] flex items-center justify-center active:translate-y-1 active:shadow-[0_2px_10px_rgba(229,9,20,0.8)] transition-all animate-emergency"
+            className={`${domeSize} mx-auto rounded-full bg-gradient-to-b from-[#E52531] via-crewRed to-darkRed border-2 border-emergencyOrange/80 shadow-[0_4px_14px_rgba(181,18,27,0.6)] flex items-center justify-center active:translate-y-0.5 active:shadow-[0_1px_6px_rgba(181,18,27,0.8)] transition-all animate-emergency`}
             aria-label="Emergency Meeting"
           >
             {/* Top Gloss highlight */}
-            <div className="w-10 h-6 -mt-5 rounded-full bg-white/40 blur-[1px]" />
+            <div className="w-6 h-3 -mt-2.5 rounded-full bg-white/40 blur-[1px]" />
           </button>
 
           {/* Emergency Text */}
-          <div className="mt-3 font-heading font-black text-xs sm:text-sm tracking-tight text-white uppercase text-glow-red">
+          <div className="mt-2 font-heading font-black text-[11px] sm:text-xs tracking-tight text-white uppercase text-glow-red">
             EMERGENCY
           </div>
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#FF6A00] font-bold">
+          <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-crewYellow font-bold">
             MEETING
           </div>
         </div>

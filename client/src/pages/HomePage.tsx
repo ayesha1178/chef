@@ -721,21 +721,21 @@ export const HomePage: React.FC<HomePageProps> = ({
           8. EMERGENCY MEETING (Reference 2 Interactive Concept)
          ======================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-darkRed/80 via-deepNavy to-darkRed/80 border-2 border-emergencyOrange p-8 sm:p-12 shadow-[0_0_50px_rgba(229,9,20,0.35)] relative overflow-hidden">
+        <div className="rounded-3xl bg-gradient-to-r from-darkRed/80 via-deepNavy to-darkRed/80 border-2 border-emergencyOrange p-6 sm:p-8 shadow-[0_0_35px_rgba(181,18,27,0.3)] relative overflow-hidden">
           
           {/* Hazard Frame Border Strip */}
-          <div className="absolute top-0 inset-x-0 h-2.5 hazard-stripes" />
-          <div className="absolute bottom-0 inset-x-0 h-2.5 hazard-stripes" />
+          <div className="absolute top-0 inset-x-0 h-2 hazard-stripes" />
+          <div className="absolute bottom-0 inset-x-0 h-2 hazard-stripes" />
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
             
-            <div className="space-y-4 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-crewYellow font-bold bg-spaceBlack/80 px-3 py-1 rounded-full border border-emergencyOrange">
+            <div className="space-y-3 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-crewYellow font-bold bg-spaceBlack/80 px-3 py-1 rounded-full border border-emergencyOrange">
                 <Megaphone className="w-3.5 h-3.5 text-crewYellow animate-bounce" />
                 REPORT AN ISSUE // EMERGENCY PROTOCOL
               </div>
 
-              <h2 className="font-heading font-black text-3xl sm:text-5xl text-white uppercase tracking-tight text-glow-red">
+              <h2 className="font-heading font-black text-2xl sm:text-4xl text-white uppercase tracking-tight text-glow-red">
                 EMERGENCY MEETING.
               </h2>
 
@@ -751,16 +751,16 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* Interactive 3D Emergency Meeting Button Component */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center shrink-0">
               <EmergencyMeetingButton
-                size="lg"
+                size="sm"
                 onClick={() => {
                   if (onOpenEmergencyMeeting) {
                     onOpenEmergencyMeeting();
                   }
                 }}
               />
-              <div className="font-mono text-[10px] text-mutedGray uppercase tracking-widest mt-3 animate-pulse">
+              <div className="font-mono text-[9px] text-mutedGray uppercase tracking-widest mt-2 animate-pulse">
                 [ CLICK TO SOUND EMERGENCY SIREN ]
               </div>
             </div>
