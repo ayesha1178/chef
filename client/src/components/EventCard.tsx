@@ -142,7 +142,7 @@ export const EventCard: React.FC<EventCardProps> = ({
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold uppercase tracking-wider transition-all ${
                   isFull
                     ? 'bg-panelBorder/40 text-mutedGray cursor-not-allowed'
-                    : 'bg-crewRed/20 hover:bg-crewRed text-crewYellow hover:text-white border border-crewRed/60 glow-red'
+                    : 'bg-crewRed/10 hover:bg-crewRed text-crewRed hover:text-white border border-crewRed/30 glow-red'
                 }`}
               >
                 {isFull ? 'FULL' : 'REGISTER'}

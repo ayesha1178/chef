@@ -238,7 +238,7 @@
     {
       "id": "admin-01",
       "email": "admin@codechefabesec.in",
-      "passwordHash": "$2b$10$2JkecImfTh3dOjeDBHk7IuX4nmtc/7m2BoP41uovRInc7DqUG6r3e",
+      "passwordHash": "$2b$10$QHOpwlWLB3GOi37Bo8D5QeHo8omUmNcRMnapszaDGVmUSZQRnXjS6",
       "name": "CodeChef ABESEC Flight Commander",
       "role": "Mission Controller",
       "createdAt": "2026-09-01T10:00:00.000Z"
