@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-spaceBlack: #07090B;
-  --color-deepNavy: #0C121B;
-  --color-spaceNavy: #090E14;
-  --color-panelBg: #0E151E;
-  --color-panelBorder: #17252B;
-  --color-border: #17252B;
+  --color-spaceBlack: #F2EFE9; /* Subtle warm cream */
+  --color-deepNavy: #FAFAF7; /* Soft off-white for panels */
+  --color-spaceNavy: #EBE6DF;
+  --color-panelBg: #FAFAF7;
+  --color-panelBorder: #DCD7CE;
+  --color-border: #DCD7CE;
   --color-crewRed: #B5121B;
   --color-darkRed: #8F0D16;
   --color-emergencyOrange: #FF6A00;
   --color-crewCyan: #1BB6C9;
   --color-crewYellow: #F2C94C;
-  --color-offWhite: #F2F2F2;
-  --color-mutedGray: #858C96;
+  --color-offWhite: #2A2F35; /* Softer Dark Text */
+  --color-mutedGray: #5C6572;
 
   /* Explicit user palette variables */
-  --color-background: #07090B;
+  --color-background: #F2EFE9;
   --color-primaryRed: #B5121B;
   --color-redGlow: #B5121B;
   --color-yellowAccent: #F2C94C;
   --color-cyanAccent: #1BB6C9;
-  --color-primaryText: #F2F2F2;
-  --color-secondaryText: #858C96;
+  --color-primaryText: #2A2F35;
+  --color-secondaryText: #5C6572;
 
   --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,16 +34,16 @@
 
 /* Base custom styles */
 :root {
-  color-scheme: dark;
-  --bg-primary: #07090B;
+  color-scheme: light;
+  --bg-primary: #F2EFE9;
   --color-primary-red: #B5121B;
   --color-dark-red: #8F0D16;
   --color-red-glow: #B5121B;
   --color-yellow-accent: #F2C94C;
   --color-cyan-accent: #1BB6C9;
-  --color-primary-text: #F2F2F2;
-  --color-secondary-text: #858C96;
-  --color-border: #17252B;
+  --color-primary-text: #2A2F35;
+  --color-secondary-text: #5C6572;
+  --color-border: #DCD7CE;
 }
 
 body {
@@ -81,12 +81,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #07090B;
+  background: #F2EFE9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #17252B;
+  background: #DCD7CE;
   border-radius: 4px;
-  border: 1px solid #17252B;
+  border: 1px solid #DCD7CE;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #B5121B;
