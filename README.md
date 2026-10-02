@@ -99,7 +99,7 @@ The design embodies a calibrated **70% premium technology platform / 30% playful
 - **Chapter Briefing (`/about`)**:
   - Chapter history, no-gatekeeping philosophy, and timeline milestones.
 - **Mission Control Admin Console (`/admin-dashboard`)**:
-  - Protected officer access (`admin@codechefabesec.in` / `codechef2026`).
+  - Protected officer access (credentials are stored securely in `.env.local`).
   - Active Missions management with full CRUD (Create, Edit, Delete, View).
   - Crew Registrations roster with search, mission filter, year filter, and CSV export.
   - Telemetry configuration and one-click seed restore.
@@ -127,5 +127,5 @@ The design embodies a calibrated **70% premium technology platform / 30% playful
 ## 🔑 Officer Clearance (Admin Login)
 
 - **URL**: `http://localhost:5173/#admin-login`
-- **Email**: `admin@codechefabesec.in` (or `admin@vanta.club`)
-- **Password**: `codechef2026` (or `vanta2026`)
+- **Email**: See your local `.env.local` file
+- **Password**: See your local `.env.local` file
