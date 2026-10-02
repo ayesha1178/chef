@@ -45,9 +45,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
   };
 
   const handleFillDemoCreds = () => {
-    setEmail('admin@codechefabesec.in');
-    setPassword('codechef2026');
-    setErrorMsg(null);
+    showToast('error', 'DISABLED', 'Demo credentials have been disabled for security.');
   };
 
   return (
@@ -111,7 +109,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@codechefabesec.in"
+                  placeholder="admin@example.com"
                   className="w-full pl-10 pr-4 py-3 rounded-xl bg-spaceBlack/80 border border-panelBorder text-offWhite text-xs font-mono placeholder-mutedGray/50 focus:outline-none focus:border-panelBorder transition-colors"
                   autoComplete="email"
                   required
@@ -159,23 +157,7 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
             </button>
           </form>
 
-          {/* Quick Demo Credentials Autofill Helper */}
-          <div className="pt-4 border-t border-panelBorder space-y-2">
-            <div className="flex items-center justify-between text-[11px] font-mono text-mutedGray">
-              <span>DEMO CLEARANCE CREDENTIALS:</span>
-              <button
-                type="button"
-                onClick={handleFillDemoCreds}
-                className="text-crewCyan hover:text-white underline font-bold"
-              >
-                Autofill Credentials
-              </button>
-            </div>
-            <div className="p-3 rounded-xl bg-spaceBlack/60 border border-panelBorder font-mono text-[11px] text-mutedGray space-y-0.5">
-              <div>Email: <span className="text-offWhite">admin@codechefabesec.in</span></div>
-              <div>Passcode: <span className="text-offWhite">codechef2026</span></div>
-            </div>
-          </div>
+          {/* Demo Credentials Helper Removed */}
         </div>
 
       </div>

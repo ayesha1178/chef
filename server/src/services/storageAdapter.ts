@@ -52,20 +52,6 @@ class StorageAdapter {
 
   private ensureDefaultAdmin() {
     const salt = bcrypt.genSaltSync(10);
-    const codechefAdmin = this.data.admins.find(a => a.email.toLowerCase() === 'admin@codechefabesec.in');
-    if (!codechefAdmin) {
-      this.data.admins.push({
-        id: 'admin-codechef',
-        email: 'admin@codechefabesec.in',
-        passwordHash: bcrypt.hashSync('codechef2026', salt),
-        name: 'CodeChef ABESEC Flight Commander',
-        role: 'Mission Controller',
-        createdAt: new Date().toISOString()
-      });
-    } else {
-      codechefAdmin.passwordHash = bcrypt.hashSync('codechef2026', salt);
-    }
-
     const defaultAdmin = this.data.admins.find(a => a.email.toLowerCase() === ENV.ADMIN_EMAIL.toLowerCase());
     if (!defaultAdmin) {
       this.data.admins.push({
@@ -76,6 +62,9 @@ class StorageAdapter {
         role: 'Mission Controller',
         createdAt: new Date().toISOString()
       });
+    } else {
+      // Ensure the password is up-to-date with env
+      defaultAdmin.passwordHash = bcrypt.hashSync(ENV.ADMIN_PASSWORD, salt);
     }
     this.saveToFile();
   }
@@ -87,14 +76,6 @@ class StorageAdapter {
       events: [...INITIAL_EVENTS],
       registrations: [...INITIAL_REGISTRATIONS],
       admins: [
-        {
-          id: 'admin-codechef',
-          email: 'admin@codechefabesec.in',
-          passwordHash: bcrypt.hashSync('codechef2026', salt),
-          name: 'CodeChef ABESEC Flight Commander',
-          role: 'Mission Controller',
-          createdAt: new Date().toISOString()
-        },
         {
           id: 'admin-01',
           email: ENV.ADMIN_EMAIL.toLowerCase(),
