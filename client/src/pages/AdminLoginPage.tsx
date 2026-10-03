@@ -45,7 +45,10 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
   };
 
   const handleFillDemoCreds = () => {
-    showToast('error', 'DISABLED', 'Demo credentials have been disabled for security.');
+    setEmail('admin@codechefabesec.in');
+    setPassword('codechef2026');
+    setErrorMsg(null);
+    showToast('info', 'OFFICER TELEMETRY PRE-FILLED', 'Demo credentials loaded. Click initialize to enter.');
   };
 
   return (
@@ -157,7 +160,23 @@ export const AdminLoginPage: React.FC<AdminLoginPageProps> = ({
             </button>
           </form>
 
-          {/* Demo Credentials Helper Removed */}
+          {/* Demo Credentials Autofill Helper */}
+          <div className="pt-4 border-t border-panelBorder/70 flex items-center justify-between gap-3 bg-spaceBlack/40 -mx-7 -mb-6 px-7 py-4 rounded-b-3xl">
+            <div className="flex items-center gap-2">
+              <Key className="w-3.5 h-3.5 text-crewYellow" />
+              <div className="font-mono text-[11px] text-mutedGray">
+                <span className="text-offWhite font-semibold">Demo:</span> admin@codechefabesec.in
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleFillDemoCreds}
+              className="px-3 py-1.5 rounded-lg bg-crewCyan/15 border border-crewCyan/50 text-crewCyan hover:bg-crewCyan hover:text-spaceBlack text-xs font-mono font-bold tracking-wider transition-all flex items-center gap-1.5 shadow-sm active:scale-95"
+            >
+              <Terminal className="w-3.5 h-3.5" />
+              <span>AUTOFILL</span>
+            </button>
+          </div>
         </div>
 
       </div>
